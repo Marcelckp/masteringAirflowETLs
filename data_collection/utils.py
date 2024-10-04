@@ -12,9 +12,10 @@ def save_data(
     zone: str = "raw",
     context: str = "books",
     file_type: str = "csv",
+    base_path: str = "/data_lake/"
 ) -> None:
     # Define the base path for the data lake where the specific data will be saved
-    DATA_LAKE_BASE_PATH = f"/data_lake/{zone}/{file_type}/{context}/"
+    DATA_LAKE_BASE_PATH = f"{base_path}{zone}/{file_type}/{context}/"
 
     # Define the full file name with the date and the file name
     full_file_name = f"{DATA_LAKE_BASE_PATH}{file_name}"
